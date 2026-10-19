@@ -1,15 +1,19 @@
 [package]
--> name        => landlock
+-> name        => volcan
 -> version     => 0.1.0
--> description => Bindingi do Linuksowego Landlocka (LSM sandboxing) w 100% H# - bez wlasnego kodu C/Rust, wylacznie `extern static [c]` do libc juz obecnej w systemie
--> author      => Bytes Developers
+-> description => Wayland compositor library for HackerScript - bindings to Louvre (C++), inspired by smithay.
+-> authors     => ["Bit Developers"]
 -> license     => MIT
+-> lang        => HackerScript
+
+[layout]
+-> lib => lib
+
+[lib]
+-> output => hlib
 
 [build]
--> lang   => h#
--> entry  => src/landlock.h#
--> output => build/liblandlock
--> emit   => lib
+-> link => static
 
-[deps]
--> libc => dynamic
+[default-build]
+-> profile => release
