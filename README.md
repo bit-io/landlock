@@ -21,31 +21,31 @@ włączone w większości dystrybucji od kilku lat). Im nowsze jądro, tym więc
 możliwości — biblioteka wykrywa wersję ABI w czasie działania
 (`landlock::abi_version()`) i pozwala dopasować do niej zakres ograniczeń.
 
-## Instalacja (bytes)
+## Instalacja (bit)
 
-W `Bytes.hk` swojego projektu:
+W `Bit.hk` swojego projektu:
 
 ```
-[deps]
--> landlock => https://github.com/<twoj-user>/landlock.git
+[dependencies]
+-> landlock => newest
 ```
 
 a potem:
 
 ```
-bytes install
+bit
 ```
 
 W kodzie:
 
 ```h#
-use "bytes -> landlock" from "landlock"
+use "bit -> landlock" from "landlock"
 ```
 
 ## Szybki start
 
 ```h#
-use "bytes -> landlock" from "landlock"
+use "bit -> landlock" from "landlock"
 
 fn main() is
     if !landlock::is_supported() is
